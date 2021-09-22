@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacionpos.FXMLPOSController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="29.0" layoutY="26.0" text="Fecha hora venta" />
+      <Label fx:id="LBLFecha" layoutX="178.0" layoutY="26.0" prefHeight="27.0" prefWidth="136.0" />
+      <Label layoutX="26.0" layoutY="70.0" text="Seleccione producto" />
+      <ComboBox fx:id="CMBProducto" layoutX="192.0" layoutY="72.0" prefHeight="2.0" prefWidth="185.0" />
+      <Label layoutX="388.0" layoutY="72.0" text="Cantidad" />
+      <TextField fx:id="TXTCantidad" layoutX="483.0" layoutY="64.0" prefHeight="0.0" prefWidth="127.0" />
+      <Button fx:id="BTNAgregar" layoutX="624.0" layoutY="66.0" mnemonicParsing="false" onAction="#onclickAgregarItem" text="Agregar" />
+      <Label layoutX="35.0" layoutY="112.0" text="Items de la venta" />
+      <TableView fx:id="TBLItems" layoutX="29.0" layoutY="163.0" prefHeight="203.0" prefWidth="770.0">
+        <columns>
+          <TableColumn fx:id="CLMProducto" prefWidth="104.0" text="Producto" />
+          <TableColumn fx:id="CLMCantidad" prefWidth="91.0" text="Cantidad" />
+            <TableColumn fx:id="CLMPrevioBase" prefWidth="165.0" text="Precio base $US" />
+            <TableColumn fx:id="CLMDescuento" prefWidth="141.0" text="Descuento $US" />
+            <TableColumn fx:id="CLMRecargos" prefWidth="129.0" text="Recargos $US" />
+            <TableColumn fx:id="CLMSubtotal" prefWidth="139.0" text="Subtotal $US" />
+        </columns>
+      </TableView>
+      <Button fx:id="BTNEliminar" layoutX="104.0" layoutY="387.0" mnemonicParsing="false" onAction="#onclickEliminarItem" text="Eliminar Item" />
+      <Button fx:id="BTNTerminarVenta" layoutX="98.0" layoutY="436.0" mnemonicParsing="false" onAction="#onclickTerminarVenta" text="Terminar Venta" />
+      <Label layoutX="374.0" layoutY="381.0" text="Subtotal sin impuesto" />
+      <Label layoutX="374.0" layoutY="418.0" text="Impuesto" />
+      <Label layoutX="374.0" layoutY="451.0" text="Total" />
+      <Label fx:id="LBLSubtotal" layoutX="576.0" layoutY="381.0" prefHeight="27.0" prefWidth="179.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Label>
+      <Label fx:id="LBLIVA" layoutX="576.0" layoutY="418.0" prefHeight="27.0" prefWidth="185.0" />
+      <Label fx:id="LBLTotal" layoutX="576.0" layoutY="451.0" prefHeight="27.0" prefWidth="179.0" />
+    </children>
+</AnchorPane>
